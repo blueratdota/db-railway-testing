@@ -8,9 +8,9 @@ const Pool = require("pg").Pool;
 // }).Pool;
 
 const pool = new Pool({
-  user: "john", // pc to pc basis
-  password: "123456", // @home 123456 pud ang pass
-  host: "localhost",
+  user: "postgres", // pc to pc basis
+  password: "qvgp96nm", // @home 123456 pud ang pass
+  host: "database-1.chigy6gykcgu.ap-southeast-2.rds.amazonaws.com",
   port: 5432,
   database: "perntodo"
 });
