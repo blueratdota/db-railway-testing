@@ -12,7 +12,10 @@ const pool = new Pool({
   password: "qvgp96nm", // @home 123456 pud ang pass
   host: "database-1.chigy6gykcgu.ap-southeast-2.rds.amazonaws.com",
   port: 5432,
-  database: "perntodo"
+  database: "perntodo",
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 module.exports = pool;
