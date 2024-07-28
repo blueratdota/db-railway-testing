@@ -5,6 +5,7 @@ const path = require("path");
 // import cors from "cors";
 const cors = require("cors");
 const pool = require("./db");
+const { log } = require("console");
 
 const port = process.env.PORT || 8000;
 const app = express();
@@ -81,4 +82,8 @@ app.delete("/todos/:id", async (req, res) => {
 
 app.listen(port, () => {
   console.log(`server is running on Port:${port}`);
+  console.log(process.env.DB_USER);
+  console.log(process.env.DB_PASSWORD);
+  console.log(process.env.DB_PORT);
+  console.log(process.env.DB_NAME);
 });
