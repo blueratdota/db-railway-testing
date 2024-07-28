@@ -8,11 +8,11 @@ const Pool = require("pg").Pool;
 // }).Pool;
 
 const pool = new Pool({
-  user: "postgres", // pc to pc basis
-  password: "qvgp96nm", // @home 123456 pud ang pass
-  host: "database-1.chigy6gykcgu.ap-southeast-2.rds.amazonaws.com",
-  port: 5432,
-  database: "perntodo",
+  user: process.env.DB_USER, // AWS MASTER USERNAME
+  password: process.env.DB_PASSWORD, // AWM MASTER PASSWORD
+  host: process.env.DB_HOSTNAME,
+  port: process.env.DB_PORT,
+  database: process.env.DB_NAME,
   ssl: {
     rejectUnauthorized: false
   }
